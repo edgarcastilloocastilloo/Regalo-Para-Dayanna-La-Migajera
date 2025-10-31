@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Para la Migajera Favorita 💌</title>
+<style>
+  :root{
+    --accent:#1db954;
+    --muted:#6b3d28;
+    --bg1:#ffd5e8;
+    --bg2:#e6f7ff;
+    --bg3:#f7f3ff;
+    --paper:#fffaf0;
+  }
+  *{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(120deg,var(--bg1),var(--bg2),var(--bg3));padding:20px}
+  .stage{width:100%;max-width:900px;border-radius:18px;padding:18px;box-shadow:0 10px 30px rgba(2,6,23,0.12);background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);overflow:hidden}
+  .header{display:flex;align-items:center;gap:12px}
+  .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,#ffdede,#ffd7b5);display:flex;align-items:center;justify-content:center;font-weight:900;color:#3b2b1f}
+  h1{margin:0;font-size:20px;color:#3b2b1f}
+  p.lead{margin:6px 0 12px;color:#5b5b5b}
+
+  .scene{min-height:320px;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:all .6s ease}
+  .hidden{display:none}
+  .btn{background:var(--accent);color:#05120a;padding:10px 14px;border-radius:12px;border:none;font-weight:800;cursor:pointer;margin:6px;box-shadow:0 6px 18px rgba(29,185,84,0.12)}
+  .ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:8px 12px;border-radius:10px;cursor:pointer;color:#4b4b4b}
+
+  /* Renata */
+  .cat-wrap{width:220px;height:220px;border-radius:20px;background:linear-gradient(180deg,#fffdf8,#f7efe2);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,0.08);margin:10px auto}
+  .cat-figure{width:180px;height:180px}
+  /* Carta */
+  .card{width:100%;max-width:720px;background:linear-gradient(180deg,#fffaf3,#fff2e6);color:#2b2b2b;border-radius:14px;padding:18px;margin-top:12px;box-shadow:0 8px 30px rgba(2,6,23,0.06)}
+  .heading{font-weight:800;font-size:18px;color:#3b2b1f}
+  .letter-text{margin-top:10px;line-height:1.45;color:#333}
+  .controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;justify-content:center}
+
+  .creds{display:grid;grid-template-columns:1fr auto;gap:12px;margin-top:12px;align-items:center}
+  .field{padding:12px;border-radius:10px;background:rgba(0,0,0,0.04);font-weight:700;color:#2b2b2b}
+
+  footer{display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;margin-top:12px;color:#5b5b5b;font-size:13px}
+
+  /* animations */
+  @keyframes fadeInUp { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+  .fade-in { animation: fadeInUp .8s ease both; }
+  .final-text { opacity:0; transform:translateY(8px); transition:opacity .9s ease, transform .9s ease; }
+  .final-text.show { opacity:1; transform:translateY(0); }
+
+  /* responsive */
+  @media (max-width:520px){
+    .cat-wrap{width:160px;height:160px}
+    .cat-figure{width:130px;height:130px}
+  }
+</style>
+</head>
+<body>
+  <div class="stage" role="main" aria-live="polite">
+    <div class="header">
+      <div class="logo">M</div>
+      <div>
+        <h1>Para la Migajera Favorita 💌</h1>
+        <p class="lead">Un regalo digital con Renata como protagonista. Toca el botón y disfruta 🎁</p>
+      </div>
+    </div>
+
+    <!-- RENATA/INTRO -->
+    <div id="scene-intro" class="scene fade-in">
+      <div class="cat-wrap" aria-hidden="true">
+        <!-- Gato negro con manchitas cafés, versión más tierna -->
+        <svg class="cat-figure" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Renata el gato">
+          <!-- cuerpo -->
+          <ellipse cx="100" cy="125" rx="60" ry="42" fill="#0b0b0b"/>
+          <!-- manchas cafés -->
+          <ellipse cx="70" cy="110" rx="12" ry="8" fill="#6b3d28"/>
+          <ellipse cx="120" cy="95" rx="10" ry="6" fill="#6b3d28"/>
+          <ellipse cx="95" cy="135" rx="8" ry="5" fill="#6b3d28"/>
+          <!-- cabeza -->
+          <circle cx="100" cy="70" r="36" fill="#0b0b0b"/>
+          <!-- manchas cabeza -->
+          <path d="M82 60 q8 -8 20 -4" fill="#6b3d28"/>
+          <path d="M118 68 q6 -6 12 -2" fill="#6b3d28"/>
+          <!-- ojos -->
+          <ellipse cx="88" cy="72" rx="6" ry="9" fill="#fff"/>
+          <ellipse cx="112" cy="72" rx="6" ry="9" fill="#fff"/>
+          <circle cx="88" cy="74" r="2.2" fill="#000"/>
+          <circle cx="112" cy="74" r="2.2" fill="#000"/>
+          <!-- naricita y boca -->
+          <circle cx="100" cy="82" r="2.4" fill="#ffb3b3"/>
+          <path d="M96 88 q4 4 8 0" stroke="#ffb3b3" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+          <!-- orejas -->
+          <path d="M72 46 q10 -12 24 -8 q-12 -2 -24 8" fill="#0b0b0b"/>
+          <path d="M128 46 q-10 -12 -24 -8 q12 -2 24 8" fill="#0b0b0b"/>
+          <!-- patas -->
+          <ellipse cx="72" cy="165" rx="10" ry="6" fill="#0b0b0b"/>
+          <ellipse cx="128" cy="165" rx="10" ry="6" fill="#0b0b0b"/>
+          <!-- cola -->
+          <path d="M150 120 q22 -8 30 -30" stroke="#0b0b0b" stroke-width="12" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+
+      <div style="text-align:center;max-width:760px">
+        <div style="font-weight:800;font-size:18px;color:#3b2b1f">Hola — soy Renata (versión digital) 🐾</div>
+        <div style="color:#5b5b5b;margin-top:8px">Pasa a la carta cuando quieras. No muerdo... solo ronroneo 😼</div>
+      </div>
+
+      <div style="margin-top:12px">
+        <button id="openLetter" class="btn">Abrir carta 💌</button>
+      </div>
+    </div>
+
+    <!-- CARTA -->
+    <div id="scene-letter" class="scene hidden">
+      <div class="card fade-in">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div>
+            <div class="heading">Nota de Renata <span style="color:#6b3d28">🐾</span></div>
+            <div style="font-size:13px;color:#6b3d28;margin-top:4px">Carta digital — versión gatuna</div>
+          </div>
+          <div style="opacity:.9;font-weight:700;color:#6b3d28">Migajera</div>
+        </div>
+
+        <div class="letter-text">
+          Hey Migajera 😺<br><br>
+          Si Renata pudiera escribir, seguro te dejaría esta nota con sus patitas. <br>
+          Como todavía no domina el teclado... me tocó a mí escribir por ella.<br><br>
+          No importa la distancia: este detallito viaja por internet, no por paquetería. <br>
+          Ojalá te saque una sonrisa (y no otro susto como el de antes).<br><br>
+          Promesa cumplida — disfruta tus canciones favoritas y piensa en Renata cuando suene algo que te guste. 🐾💚
+        </div>
+
+        <div class="controls">
+          <button id="viewGift" class="btn">Ver el regalo 🎁</button>
+          <button id="backIntro" class="ghost">Volver</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- REGALO -->
+    <div id="scene-gift" class="scene hidden">
+      <div style="text-align:center">
+        <div style="font-weight:900;font-size:20px;color:var(--accent)">¡Feliz cumpleaños, Migajera! 🎉</div>
+        <div style="color:#555;margin-top:6px">Te prometí una cuenta de Spotify… y como soy de palabra, aquí está.</div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-weight:800">Credenciales de acceso</div>
+          <div style="font-size:13px;color:#5b5b5b">Recomendación: cambia la contraseña en cuanto puedas.</div>
+
+          <div class="creds">
+            <div>
+              <div style="font-size:12px;color:#6b3d28">Email / Usuario</div>
+              <div id="emailField" class="field">migajeraspotify@correo.com</div>
+            </div>
+            <div>
+              <div style="font-size:12px;color:#6b3d28">Contraseña</div>
+              <div id="passField" class="field" style="letter-spacing:3px">••••••••••</div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:8px;justify-content:center;margin-top:8px">
+            <button id="revealPass" class="ghost">Revelar contraseña</button>
+            <button id="copyCreds" class="btn">Copiar credenciales</button>
+            <button id="openSpotify" class="ghost">Abrir Spotify</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;text-align:center;color:#555">
+        <div id="finalText" class="final-text">¡Gracias por tu amistad!</div>
+      </div>
+    </div>
+
+    <footer>
+      <div style="font-size:12px">Consejo: si usas esta cuenta, cambia la contraseña luego de iniciar sesión.</div>
+    </footer>
+  </div>
+
+<script>
+const CREDENTIALS = {
+  email: 'migajeraspotify@correo.com',
+  password: 'Renata123🎧'
+};
+
+const sceneIntro = document.getElementById('scene-intro');
+const sceneLetter = document.getElementById('scene-letter');
+const sceneGift = document.getElementById('scene-gift');
+const openLetter = document.getElementById('openLetter');
+const viewGift = document.getElementById('viewGift');
+const backIntro = document.getElementById('backIntro');
+const emailField = document.getElementById('emailField');
+const passField = document.getElementById('passField');
+const revealPass = document.getElementById('revealPass');
+const copyCreds = document.getElementById('copyCreds');
+const openSpotify = document.getElementById('openSpotify');
+const finalText = document.getElementById('finalText');
+
+emailField.textContent = CREDENTIALS.email;
+
+// audio: ambient simple starting at letter
+let audioCtx=null, ambientNodes=null;
+function initAudio(){ if(audioCtx) return; audioCtx=new (window.AudioContext||window.webkitAudioContext)(); }
+function startAmbient(){ if(!audioCtx) initAudio(); if(ambientNodes) return; const noiseBuf=audioCtx.createBuffer(1, audioCtx.sampleRate*2, audioCtx.sampleRate); const data=noiseBuf.getChannelData(0); for(let i=0;i<data.length;i++) data[i]=(Math.random()*2-1)*0.15; const noise=audioCtx.createBufferSource(); noise.buffer=noiseBuf; noise.loop=true; const noiseGain=audioCtx.createGain(); noiseGain.gain.value=0.05; const osc=audioCtx.createOscillator(); osc.type='sine'; osc.frequency.value=120; const oscGain=audioCtx.createGain(); oscGain.gain.value=0.02; const filter=audioCtx.createBiquadFilter(); filter.type='lowpass'; filter.frequency.value=900; noise.connect(filter); filter.connect(noiseGain); noiseGain.connect(audioCtx.destination); osc.connect(oscGain); oscGain.connect(audioCtx.destination); noise.start(); osc.start(); ambientNodes={noise,osc,noiseGain,oscGain,filter}; }
+function stopAmbient(){ if(!ambientNodes) return; try{ ambientNodes.noise.stop(); ambientNodes.osc.stop(); }catch(e){} ambientNodes=null; }
+
+function show(id){ [sceneIntro,sceneLetter,sceneGift].forEach(s=>s.classList.add('hidden')); id.classList.remove('hidden'); }
+
+openLetter.addEventListener('click', ()=>{ show(sceneLetter); startAmbient(); });
+viewGift.addEventListener('click', ()=>{ show(sceneGift); // revelar final con fade-in
+  setTimeout(()=>{ finalText.classList.add('show'); }, 400); });
+backIntro.addEventListener('click', ()=>{ show(sceneIntro); stopAmbient(); finalText.classList.remove('show'); });
+
+let revealed=false;
+revealPass.addEventListener('click', ()=>{
+  if(!revealed){ passField.textContent = CREDENTIALS.password; revealPass.textContent='Ocultar contraseña'; revealed=true; } else { passField.textContent='••••••••••'; revealPass.textContent='Revelar contraseña'; revealed=false; }
+});
+
+copyCreds.addEventListener('click', async ()=>{
+  const text=`Email: ${CREDENTIALS.email}\nContraseña: ${CREDENTIALS.password}`;
+  try{ await navigator.clipboard.writeText(text); copyCreds.textContent='Copiado ✅'; setTimeout(()=>copyCreds.textContent='Copiar credenciales',1500); }catch(e){ copyCreds.textContent='Copiar (manual)'; setTimeout(()=>copyCreds.textContent='Copiar credenciales',1500); }
+});
+
+openSpotify.addEventListener('click', ()=>{ window.open('https://open.spotify.com','_blank'); });
+
+// tecla Enter avanza desde intro a carta
+document.addEventListener('keydown',(e)=>{ if(e.key==='Enter' && sceneLetter.classList.contains('hidden')){ show(sceneLetter); startAmbient(); } });
+</script>
+</body>
+</html>
